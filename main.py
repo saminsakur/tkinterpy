@@ -1,5 +1,8 @@
 from tkinter import * # imports tkinter
 
+
+window = Tk()
+
 #key down function
 def click():
     entered_text = textentry1.get() # this will get the values from the text box
@@ -10,7 +13,10 @@ def click():
         definition = "Sorry there is no word found to your match, please try again."
     output.insert(END, definition)
 
-window = Tk()
+# exit function:
+def close_window():
+    window.destroy()
+    exit()
 
 window.title("My cool interface") # sets the window title
 window.configure(background="black") ## sets full window background to black
@@ -44,5 +50,15 @@ my_dictionary = {
     "bug": "A piece of code that causes a problem to fail",
     "algorith": "Step by step instructions to complete a task"
 }
+
+# exit label
+exit_label = Label(window, text="\n Click to exit:", bg="black", fg="white", font="none 12 bold")
+exit_label.grid(column=0, row=6, sticky=W)
+
+# exit button
+exit_button = Button(window, text="Exit", width=14, command=close_window,bg="red", fg="black")
+exit_button.grid(row=7, column=0, sticky=W)
+
+
 ###############
 window.mainloop() # main loop to run tk interface repeatedly
