@@ -13,13 +13,16 @@ def exit():
 
 # function sayHello for myButton:
 def sayHello():
-    Label(window, text="Hello, " + e.get()).pack()
+    hello = "Hello, " + e.get()
+    Label(window, text=hello).pack()
+
 # Create a Label
 Label(window, text="Enter your name")
 
 #Create a entry widget 
 e = Entry(window, width=50)
 e.pack()
+e.insert(0, "Enter your name")
 
 # Create a submit button
 myButton = Button(window, text="SUBMIT", command=sayHello)
