@@ -60,5 +60,5 @@ exit_button = Button(window, text="Exit", width=14, command=close_window,bg="red
 exit_button.grid(row=7, column=0, sticky=W)
 
 
-###############
-window.mainloop() # main loop to run tk interface repeatedly
+################ main loop to run tk interface repeatedly
+window.mainloop() 
