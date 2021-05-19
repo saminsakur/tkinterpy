@@ -5,7 +5,7 @@ window = Tk()
 window.title("My gui")
 
 # sets window logo / image
-window.iconmask()
+window.iconmask("Images\\icon.bmp")
 
 # main loop to display the window repeatedly
 window.mainloop()
