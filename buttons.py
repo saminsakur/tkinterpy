@@ -7,9 +7,12 @@ window = Tk() # the class for the window
 def exit():
     window.destroy()
 
+# function onclick for myButton:
+def onClick():
+    Label(window, text="Look I pressed a button!").pack()
 
 ################
-myButton = Button(window, text="Click me")
+myButton = Button(window, text="Click me", padx=100, pady=10, command=onClick)
 myButton.pack()
 
 # Create a buton to exit:
