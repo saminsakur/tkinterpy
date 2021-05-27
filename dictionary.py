@@ -22,7 +22,7 @@ window.title("My cool interface") # sets the window title
 window.configure(background="black") ## sets full window background to black
 
 ####photo
-photo1 = PhotoImage(file="Images\\icon.png") # path of the image
+photo1 = PhotoImage(file="Images/icon.png") # path of the image
 Label (window, image=photo1, bg="black").grid(row=0, column=0, sticky=W)
 
 # create label

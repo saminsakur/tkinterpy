@@ -22,6 +22,18 @@ def button_click(num):
 def clear():
     e.delete(0, END)
 
+# function for add
+def add():
+    global n1
+    n1 = e.get()
+    e.delete(0, END)
+
+# function for equal:
+def equal():
+    n2 = e.get()
+    e.delete(0, END)
+    sum = n1 + n2
+    e.insert(sum)
 
 # The buttons for calculator
 # Calculator buttons
@@ -35,8 +47,8 @@ button_7 = Button(window, text=7, padx=40, pady=20, command=lambda: button_click
 button_8 = Button(window, text=8, padx=40, pady=20, command=lambda: button_click(8))
 button_9 = Button(window, text=9, padx=40, pady=20, command=lambda: button_click(9))
 button_0 = Button(window, text=0, padx=40, pady=20, command=lambda: button_click(0))
-button_additon = Button(window, text="+", padx=39, pady=20, command=lambda: add())
-button_equal = Button(window, text="=", padx=91, pady=20, command=lambda: equal())
+button_additon = Button(window, text="+", padx=39, pady=20, command=add())
+button_equal = Button(window, text="=", padx=91, pady=20, command=equal())
 button_clear = Button(window, text="Clear", padx=79, pady=20, command=clear)
 
 ######### put the buttons on the screen
